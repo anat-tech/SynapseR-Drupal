@@ -1,0 +1,6 @@
+name = RSS Reader
+description = Australia council RSS in a block
+core = 7.x
+package = Synapse
+version = Alpha 0.1
+php = 5

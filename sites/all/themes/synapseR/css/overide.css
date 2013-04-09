@@ -1,0 +1,170 @@
+@font-face {
+    font-family:planer;
+    src:url(/sites/all/themes/synapseR/fonts/planer_reg-webfont.ttf);
+}
+h1,h2,h3,h4,h5,h6, nav  {
+    font-family:planer;
+}
+
+a {
+    color:rgb(254,83,53);
+    text-decoration:none;
+
+}
+
+a:hover, a:focus {
+    text-decoration:underline;
+}
+
+input {
+	border-radius:0.25em;
+	border:1px solid rgb(153,153,153);
+}
+
+input:focus {
+	border:1px solid rgb(255,84,54);
+}
+
+.form-item label, label {
+    font-weight:normal;
+    font-size:0.85em;
+    padding-right:0.25em;padding-left:0.25em;
+}
+
+header {
+   margin-top:2em;
+}
+
+nav#main-menu {
+   padding-bottom:0.5em;
+   border-bottom:1px solid black;
+}
+nav#main-menu, nav#secondary-menu {
+   text-transform:uppercase;
+   font-size:1.1em;
+}
+
+div#block-rssreader-rssreader {
+    font-size:0.9em;
+}
+
+/* user login form*/
+
+div.region.region-header div.block form div{
+/*#user-login-form div {*/
+    float:left;
+}
+
+#user-login-form .item-list{
+   float:right;
+}
+
+#block-user-login form div label, #block-user-login form div label span {
+   color:rgba(0,0,0,0);
+}
+
+#block-user-login form div label {
+  float:left;
+  width:14px;
+  height:14px;  
+  background-image:url('../images/glyphicons-halflings.png');
+  margin-top: 0.25em;
+  margin-left: 0.5em;
+}
+
+#block-user-login .form-item.form-type-textfield.form-item-name label {
+    background-position:-168px 0px;
+}
+
+#block-user-login .form-item.form-type-password.form-item-pass label {
+    background-position:-287px -24px;
+}
+
+#user-login-form .form-item, #user-login-form .item-list, #user-login-form ul {
+margin:0;
+padding-top:0;
+}
+#user-login-form ul {
+padding:0;
+}
+
+button, .form-submit, #user-login-form div.item-list li a {
+	list-style-type:none;
+	border:none;
+	background-color:rgb(206,238,93);
+	margin-right:0.5em;margin-left:0.5em;
+	border-radius:0.25em;
+	padding-bottom:0.25em;
+}
+
+button:hover, button:focus, .form-submit:focus, .form-submit:hover, #user-login-form div.item-list li a:hover, #user-login-form div.item-list li a:focus {
+    background-color:rgb(153,153,153);
+}
+
+
+#user-login-form #edit-actions{ /*margin-top:1.4em;*/ margin-top:0px;}
+#user-login-form #edit-submit{  padding-bottom:0.25em;}
+
+#user-login-form li a {
+    padding-left:0.5em;padding-right:0.5em;
+    text-decoration:none;
+    color:black;
+    font-weight:normal;    
+}
+
+/********/
+
+#nav-wrap {
+    width: 75%;
+    float: left;
+}
+
+/* slide shows */
+.view-id-profile_slideshow .views-field.views-field-field-biography{
+font-size:0.9em;
+width:600px;
+}
+/*****/
+
+/* user menu*/
+	
+div.region.region-header div.block ul.menu li {
+	list-style-image:none;
+	list-style-type:none;
+	float:right;
+	padding-left:1em;
+}
+
+/**/
+
+table {
+    border-left:1px solid black;
+    border-right:1px solid black;
+    border-top:1px solid black;
+}
+
+table tbody tr td {
+    padding:0;
+    border-left:1px solid black;
+    margin:0.25em;
+}
+table tbody tr:nth-child(2n) {
+    background-color:rgba(206,238,93, 0.5);
+    padding-left:0.5em;padding-right:0.5em;
+    border-bottom:1px solid rgb(0,0,0);
+
+}
+table tbody tr:nth-child(2n-1) {
+    border-bottom:1px solid rgb(0,0,0);
+    background-color:rgba(220,220,220, 0.5)
+}
+
+table tbody tr td div.views-field {
+    padding:0.25em;
+}
+
+
+footer div.rss {
+float:left;
+width:20%;
+}

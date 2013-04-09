@@ -1,0 +1,6 @@
+name = Static RSS Feeds
+description = Displaying specific rss feeds in a block for synapse
+core = 7.x
+package = Synapse
+version = Alpha 0.1
+php = 5

@@ -1,0 +1,96 @@
+<?php
+/*
+ * RSS Reader
+ * @author Cameron Milton <cameron@anat.org.au>
+ */
+
+/**
+ * parses a feed into a basic html list
+ * @todo: prevent going over end of item array with validation.
+ * dynamically generate form to add more feeds.
+ */
+function AustCouncilRss_getFeed($url)  {
+/*    //$rss = simplexml_load_file($url);
+    $c = curl_init($url);
+    curl_setopt($c, CURLOPT_RETURNTRANSFER, true);
+    $html = curl_exec($c);
+    curl_close($c);
+
+    //$out = "<!--".$html."-->";
+    //parsing
+    //remove head
+    $pos1 = stripos($html,"<rss");
+    $ausrss = substr($html, $pos1);
+    //remove tail
+    $pos2 = stripos($ausrss, "</rss>");
+    $ausrss = substr($ausrss, 0, $pos2);
+    $ausrss .= "\n</rss>";
+  
+//    file_put_contents(getcwd()."/ausrss.tmp", $ausrss);
+//    $rss = simplexml_load_file(getcwd()."/ausrss.tmp");
+    $rss = simplexml_load_string($ausrss);
+*/
+    $rss = simplexml_load_file($url);
+    $out = '';
+    //checks simplexml has data
+    if(isset($rss->channel->item)) {
+	
+        //if(variable_get('AustCouncilRss_title')) 
+	$out = '<h3>Australia Council</h3>'.PHP_EOL.'<ul>'.PHP_EOL;
+
+        //pull list & variables
+        $items = $rss->channel->item;
+        $max = 3;
+
+        //check how many items to put out.
+            //some of the items
+        for($i = 0; $i < $max; $i++) {
+            $out .= '<li><a target="_blank" href="'.$items[$i]->link.'">'.$items[$i]->title.'</a><br />';
+            //$out .= '<li><a target="_blank" href="http://www.australiacouncil.gov.au/">'.$items[$i]->title.'</a><br />';
+            //checks if outputing date was selected, and does so.
+            //if(variable_get('AustCouncilRss_item_dates')) $out .= PHP_EOL.'<span>'.$items[$i]->pubDate.'</span>'.PHP_EOL;
+            $out .='</li>'.PHP_EOL;
+        }
+    }
+    return $out.PHP_EOL;
+}
+
+/**
+ * sets up the static feed display
+ */
+function AustCouncilRssDisplay() {
+    $url = "http://www.australiacouncil.gov.au/home/RSS";
+    $out = '<div class="rss">'.AustCouncilRss_getFeed($url)."</div>";
+    return $out;
+}
+
+//hooks
+
+/**
+ *Implements block_info().
+*/
+function AustCouncilRss_block_info() {
+  $blocks['AustCouncilRss'] = array (
+    'info' => 'Australia Council RSS',
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+/**
+ * Implements block_view().
+ */
+function AustCouncilRss_block_view($delta = '') {
+  $block = array();
+  switch($delta) {
+    case 'AustCouncilRss':
+      $block['subject'] = t('');
+      $block['content'] = array (
+        '#markup' => t(AustCouncilRssDisplay()),
+      );
+    break;
+  }
+  return $block;
+}
+
+?>

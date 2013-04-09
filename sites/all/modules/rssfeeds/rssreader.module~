@@ -1,0 +1,151 @@
+<?php
+/*
+ * RSS Reader
+ * @author Cameron Milton <cameron@anat.org.au>
+ */
+
+/**
+ * parses a feed into a basic html list
+ * @todo: prevent going over end of item array with validation.
+ * dynamically generate form to add more feeds.
+ */
+function getFeed($url)  {
+    $rss = simplexml_load_file($url);
+    $out = '';
+    //checks simplexml has data
+    if(isset($rss->channel->item)) {
+        if(variable_get('rssreader_title')) $out = '<h3>'.$rss->channel->title.'</h3>'.PHP_EOL.'<ul>'.PHP_EOL;
+
+        //pull list & variables
+        $items = $rss->channel->item;
+        $max = variable_get('rssreader_num');
+
+        //check how many items to put out.
+        if($max == 0) {
+            //all the items
+            foreach($items as $item) {
+                $out .= '<li><a target="_blank" href="'.$item->link.'">'.$item->title.'</a>';
+                //checks if outputing date was selected, and does so.
+                if(variable_get('rssreader_item_dates')) $out .= PHP_EOL.'<span>'.$item->pubDate.'</span><br />'.PHP_EOL;
+                $out .= '</li>'.PHP_EOL;
+            }
+        }
+        else {
+            //some of the items
+            for($i = 0; $i < $max; $i++) {
+                $out .= '<li><a target="_blank" href="'.$items[$i]->link.'">'.$items[$i]->title.'</a><br />';
+                //checks if outputing date was selected, and does so.
+                if(variable_get('rssreader_item_dates')) $out .= PHP_EOL.'<span>'.$items[$i]->pubDate.'</span>'.PHP_EOL;
+                $out .='</li>'.PHP_EOL;
+            }
+        }
+    }
+    return $out.'</ul>'.PHP_EOL;
+}
+
+/**
+ * sets up the static feed display
+ */
+function rssreaderDisplay() {
+    $url = variable_get("rssreader_url", '');
+    $out = '<div style="width:19%;float:left;" id="anatRSS">'.getFeed($url).'</div>';
+    //ARC RSS seems broken or non-existent
+    //  $out .= '<div id="arcRSS">'.getFeed('http://www.australiacouncil.gov.au/resources/rsslatestnews').'</div>';
+    return $out;
+}
+
+//hooks
+/**
+ * Implements admin().
+ */
+function rssreader_admin() {
+    //url field    
+    $form['rssreader_url'] = array (
+        '#type' => 'textfield',
+        '#title' => t('URL'),
+        '#default_value' => variable_get('rssreader_url', ''),
+        '#description' => t("URL of existing feed"),
+        '#required' => TRUE,
+    );
+    //Number of items
+    $form['rssreader_num'] = array (
+        '#type' => 'textfield',
+        '#title' => t('Number of items'),
+        '#default_value' => variable_get('rssreader_num', '4'),
+        '#description' => t("Number of items to be shown, (0) for all."),
+        '#required' => TRUE,
+    );
+    //Show RSS title?
+    $form['rssreader_title'] = array (
+        '#type' => 'checkbox',
+        '#title' => t('Display title?'),
+        '#default_value' => variable_get('rssreader_title', '1'),
+        '#description' => t("Display the title given with the RSS feed"),
+        '#required' => FALSE,
+    );
+    //Show dates?
+    $form['rssreader_item_dates'] = array (
+        '#type' => 'checkbox',
+        '#title' => t('Show item dates?'),
+        '#default_value' => variable_get('rssreader_item_dates', '0'),
+        '#description' => t("Display the date ever item in the feed was posted."),
+        '#required' => FALSE,
+    );
+    
+    return system_settings_form($form);
+}
+/**
+ * Implements admin_validate().
+ */
+function rssreader_admin_validate($form, &$form_state) {
+    $num = $form_state['values']['rssreader_num'];
+    if(!is_numeric($num) || ($num < 0)) {
+        form_set_error('rssreader_num', t('You must enter a positive integer for the Number of Items.'));
+    }
+}
+
+/**
+ * Implements menu().
+ */
+function rssreader_menu() {
+    $items['admin/structure/rssreader'] = array(
+        'title' => 'RSS Reader',
+        'description' => 'Set options for the RSS Reader module.',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('rssreader_admin'),
+        'access arguments' => array('administer permissions'),
+        'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+}
+//end of admin
+
+
+/**
+ *Implements block_info().
+*/
+function rssreader_block_info() {
+  $blocks['rssreader'] = array (
+    'info' => 'RSS Reader',
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+/**
+ * Implements block_view().
+ */
+function rssreader_block_view($delta = '') {
+  $block = array();
+  switch($delta) {
+    case 'rssreader':
+      $block['subject'] = t('');
+      $block['content'] = array (
+        '#markup' => t(rssreaderDisplay()),
+      );
+    break;
+  }
+  return $block;
+}
+
+?>

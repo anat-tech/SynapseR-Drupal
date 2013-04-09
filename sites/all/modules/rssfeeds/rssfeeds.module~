@@ -1,0 +1,93 @@
+<?php
+/*
+ * Static RSS Feeds
+ */
+
+//parses a feed into a basic html list
+function getFeed($url)  {
+  $rss = simplexml_load_file($url);
+  $out = '';
+  //checks simplexml has data
+  if(isset($rss->channel->item)) {
+    $out = '<h3>'.$rss->channel->title.'</h3>'.PHP_EOL.'<ul>'.PHP_EOL;
+    
+    
+    /*pull list*/
+    $items = $rss->channel->item;
+    
+    //for loop to return only X (4) of the most current
+    for($i = 0; $i <= 3; $i++) {
+      $out .= '<li><a target="_blank" href="'.$items[$i]->link.'">'.$items[$i]->title.'</a></li>'.PHP_EOL;
+    }
+  }
+  return $out.PHP_EOL.'</ul>'.PHP_EOL;
+}
+
+//sets up the static feed display
+function rssReaderDisplay() {
+    $url = variable_get("rssReader_url", '');
+    $query = "SELECT nid, title, created FROM " .
+           "{node} WHERE created >= %d " .
+           "AND created <= %d";
+    $query_result = db_query_range($query, $start_time, $end_time, 0, $url);
+    $out = $query_results;
+    //$out = '<div style="width:19%;float:left;" id="anatRSS">'.getFeed('http://www.anat.org.au/feed').'</div>';
+    //ARC RSS seems broken or non-existent
+    //  $out .= '<div id="arcRSS">'.getFeed('http://www.australiacouncil.gov.au/resources/rsslatestnews').'</div>';
+ return print_f($out);
+}
+
+//hooks
+//implements admin.
+function rssReader_admin() {
+    //url field    
+    $form['rssReader_url'] = array (
+        '#type' => 'textfield',
+        '#title' => t('URL'),
+        '#default_value' => variable_get('rssReader_url', ''),
+        '#description' => t("URL of existing feed"),
+        '#required' => TRUE,
+    );
+    
+    return system_settings_form($form);
+}
+//implements menu.
+function rssReader_menu() {
+    $items['admin/settings/rssReader'] = array(
+        'title' => 'RSS Reader settings',
+        'description' => 'Set options for the RSS Reader module.',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('rssReader_admin'),
+        'access arguments' => array('administer permissions'),
+        'type' => MENU_NORMAL_ITEM,
+    );
+    return $items;
+}
+//end of admin
+
+
+//implements block_info.
+function rssReader_block_info() {
+  $blocks['rssReader'] = array (
+    'info' => 'RSS Reader',
+    'cache' => DRUPAL_NO_CACHE,
+  );
+  return $blocks;
+}
+
+//implements block_view.
+function rssReader_block_view($delta = '') {
+  $block = array();
+  switch($delta) {
+    case 'rssReader':
+      $block['subject'] = t('');
+      $block['content'] = array (
+        '#markup' => t(rssReaderDisplay()),
+//        '#markup' => t('test'),
+      );
+    break;
+  }
+  return $block;
+}
+//
+?>

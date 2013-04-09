@@ -1,0 +1,5 @@
+body {
+    background-color:white;
+    background-image:URL('/sites/all/themes/synapseR/images/backdrop.jpg');
+    background-repeat:repeat-x;
+}

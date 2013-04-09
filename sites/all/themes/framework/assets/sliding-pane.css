@@ -1,0 +1,11 @@
+/* for adjusting the sliding pane */
+#block-views-profile-slideshow-block .block-title {
+display:none;
+}
+
+
+views_slideshow_cycle_teaser_section_profile_slideshow-block {}
+div#views_slideshow_cycle_div_profile_slideshow-block_0, views_slideshow_cycle_div_profile_slideshow-block_1, views_slideshow_cycle_div_profile_slideshow-block_2{
+overflow:visible;
+position:static;
+}

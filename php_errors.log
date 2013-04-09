@@ -1,0 +1,127 @@
+[07-Dec-2011 15:31:51] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /var/www/synapse/synapseR/includes/database/query.inc on line 329
+[28-Aug-2012 22:09:57] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[28-Aug-2012 22:17:45] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[28-Aug-2012 23:08:56] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[29-Aug-2012 06:35:20] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[29-Aug-2012 06:53:14] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[29-Aug-2012 06:58:36] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[29-Aug-2012 11:12:07] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[29-Aug-2012 11:21:30] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[29-Aug-2012 18:15:51] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[29-Aug-2012 18:23:28] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[30-Aug-2012 10:30:48] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[30-Aug-2012 10:49:35] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[30-Aug-2012 10:59:00] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 14:52:24] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 14:52:34] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 14:59:50] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 14:59:53] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 15:01:20] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 15:03:03] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 15:11:01] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 15:13:31] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 15:17:28] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:17:29] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:17:32] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:17:32] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:17:35] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:17:36] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:17:36] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:17:37] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:18:03] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:18:04] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:18:04] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:18:05] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:18:05] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:18:06] PHP Fatal error:  Cannot redeclare drupal_build_form() (previously declared in /var/www/synapse/synapseR/includes/form.inc:304) in /var/www/synapse/synapseR/sites/all/modules/views/views.module on line 1145
+[03-Sep-2012 15:23:49] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 15:24:55] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 15:24:58] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 15:26:36] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[03-Sep-2012 20:09:21] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[04-Sep-2012 10:07:18] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[04-Sep-2012 10:13:37] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[04-Sep-2012 10:14:07] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[04-Sep-2012 10:16:15] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[04-Sep-2012 10:20:04] PHP Fatal error:  Unsupported operand types in /var/www/synapse/synapseR/sites/all/modules/views/includes/handlers.inc on line 1032
+[25-Oct-2012 14:20:45] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /var/www/synapse/synapseR/includes/module.inc on line 0
+[25-Oct-2012 14:24:12] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /var/www/synapse/synapseR/includes/errors.inc on line 74
+[25-Oct-2012 14:24:38] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /var/www/synapse/synapseR/modules/dblog/dblog.module on line 141
+[25-Oct-2012 14:26:21] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /var/www/synapse/synapseR/includes/errors.inc on line 74
+[25-Oct-2012 14:28:07] PHP Fatal error:  Maximum execution time of 30 seconds exceeded in /var/www/synapse/synapseR/includes/common.inc on line 1329
+[04-Dec-2012 15:20:38] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 10
+[04-Dec-2012 15:20:45] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 10
+[04-Dec-2012 15:22:07] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 10
+[04-Dec-2012 15:22:08] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 10
+[04-Dec-2012 15:23:42] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 10
+[04-Dec-2012 15:23:43] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 10
+[04-Dec-2012 15:24:36] PHP Parse error:  syntax error, unexpected '*' in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 29
+[04-Dec-2012 15:24:37] PHP Parse error:  syntax error, unexpected '*' in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 29
+[04-Dec-2012 15:30:48] PHP Parse error:  syntax error, unexpected T_BREAK in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 27
+[04-Dec-2012 15:30:49] PHP Parse error:  syntax error, unexpected T_BREAK in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 27
+[04-Dec-2012 15:31:05] PHP Parse error:  syntax error, unexpected ',' in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 23
+[04-Dec-2012 15:31:06] PHP Parse error:  syntax error, unexpected ',' in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 23
+[04-Dec-2012 15:42:54] PHP Fatal error:  Call to undefined function rssFeedsDisplay() in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 29
+[04-Dec-2012 15:42:54] PHP Fatal error:  Call to undefined function rssFeedsDisplay() in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 29
+[04-Dec-2012 15:43:19] PHP Fatal error:  Call to undefined function rssFeedsDisplay() in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 29
+[04-Dec-2012 15:44:03] PHP Fatal error:  Call to undefined function rssFeedsDisplay() in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 29
+[04-Dec-2012 15:56:51] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 15:56:52] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 15:57:19] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 15:57:20] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 15:58:19] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 15:58:20] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 15:59:12] PHP Fatal error:  Call to undefined function rssFeedsDisplay() in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 35
+[04-Dec-2012 16:00:15] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 16:00:15] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 16:00:34] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 16:00:35] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 16:01:15] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 16:01:16] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 16:01:24] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 16:01:24] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 21
+[04-Dec-2012 16:08:29] PHP Parse error:  syntax error, unexpected T_FOR in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 14
+[04-Dec-2012 16:08:30] PHP Parse error:  syntax error, unexpected T_FOR in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 14
+[04-Dec-2012 16:17:57] PHP Fatal error:  Call to undefined function rssFeedsDisplay() in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 47
+[04-Dec-2012 16:37:36] PHP Parse error:  syntax error, unexpected '}' in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 25
+[04-Dec-2012 16:37:37] PHP Parse error:  syntax error, unexpected '}' in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssfeeds.module on line 25
+[05-Dec-2012 01:31:42] PHP Fatal error:  Call to undefined function print_f() in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssreader.module on line 37
+[05-Dec-2012 02:07:12] PHP Parse error:  syntax error, unexpected T_VARIABLE in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssreader.module on line 12
+[05-Dec-2012 02:07:13] PHP Parse error:  syntax error, unexpected T_VARIABLE in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssreader.module on line 12
+[02-Apr-2013 15:18:43] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /var/www/synapse/synapseR/sites/all/themes/framework/html.tpl.php on line 18
+[02-Apr-2013 15:36:44] PHP Parse error:  syntax error, unexpected T_ECHO, expecting ',' or ';' in /var/www/synapse/synapseR/sites/all/themes/framework/html.tpl.php on line 18
+[02-Apr-2013 19:40:39] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:40:47] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:42:22] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:42:33] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:43:11] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:47:21] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:48:21] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:48:28] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:49:20] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:49:59] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:50:51] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:51:07] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:53:55] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[02-Apr-2013 19:57:33] PHP Parse error:  syntax error, unexpected T_ENDIF in /var/www/synapse/synapseR/sites/all/themes/zen/templates/region--sidebar.tpl.php on line 35
+[03-Apr-2013 15:14:20] PHP Parse error:  syntax error, unexpected '=' in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 14
+[03-Apr-2013 15:14:37] PHP Parse error:  syntax error, unexpected '=' in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 14
+[03-Apr-2013 15:14:55] PHP Fatal error:  Cannot redeclare getFeed() (previously declared in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssreader.module:12) in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 47
+[03-Apr-2013 15:16:33] PHP Fatal error:  Cannot redeclare getFeed() (previously declared in /var/www/synapse/synapseR/sites/all/modules/rssfeeds/rssreader.module:12) in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 47
+[03-Apr-2013 15:47:22] PHP Parse error:  syntax error, unexpected T_VARIABLE in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 16
+[03-Apr-2013 16:07:37] PHP Parse error:  syntax error, unexpected ';' in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 23
+[03-Apr-2013 16:08:26] PHP Parse error:  syntax error, unexpected T_IF in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 27
+[03-Apr-2013 16:13:45] PHP Parse error:  syntax error, unexpected T_SL in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 23
+[03-Apr-2013 16:13:46] PHP Parse error:  syntax error, unexpected T_SL in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 23
+[03-Apr-2013 16:16:09] PHP Parse error:  syntax error, unexpected '=' in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 24
+[03-Apr-2013 16:16:14] PHP Parse error:  syntax error, unexpected '=' in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 24
+[03-Apr-2013 16:22:00] PHP Parse error:  syntax error, unexpected '*' in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 54
+[03-Apr-2013 16:22:00] PHP Parse error:  syntax error, unexpected '*' in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 54
+[03-Apr-2013 16:45:08] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[03-Apr-2013 16:46:43] PHP Parse error:  syntax error, unexpected '}' in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 56
+[03-Apr-2013 16:46:56] PHP Parse error:  syntax error, unexpected '}' in /var/www/synapse/synapseR/sites/all/modules/AustCouncilRss/AustCouncilRss.module on line 56
+[03-Apr-2013 17:20:36] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[03-Apr-2013 19:45:53] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[03-Apr-2013 21:30:21] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[06-Apr-2013 07:59:47] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[09-Apr-2013 00:19:31] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
