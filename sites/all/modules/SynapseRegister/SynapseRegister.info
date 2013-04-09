@@ -1,0 +1,6 @@
+name = Registration Form
+description = Custom registration form for synapse
+core = 7.x
+package = Synapse
+version = Alpha 0.1
+php = 5

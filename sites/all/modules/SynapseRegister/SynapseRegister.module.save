@@ -1,0 +1,29 @@
+<?php
+/*
+ * Synapse Registration form
+  * @author Cameron Milton <cameron@anat.org.au>
+   */
+   
+   /**
+    * parses a feed into a basic html list
+     * @todo: prevent going over end of item array with validation.
+      * dynamically generate form to add more feeds.
+       */
+       
+        /* variable_get('id') */
+        
+        //hooks
+        /**
+         * Implements admin().
+          */
+          function SynapseRegister_admin() {
+              //solve360key
+                  $form['SynapseRegister_solve360key'] = array (
+                          '#type' => 'textfield',
+                                  '#title' => t('solve360 api key'),
+                                          '#default_value' => variable_get('SynapseRegister_solve360key', ''),
+                                                  '#description' => t("Solve360 API key"),
+                                                          '#required' => TRUE,
+                                                              );
+                                                                  return system_settings_form($form);
+                                                                  }
