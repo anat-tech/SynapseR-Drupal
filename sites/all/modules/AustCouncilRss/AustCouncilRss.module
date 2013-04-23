@@ -36,7 +36,7 @@ function AustCouncilRss_getFeed($url)  {
     if(isset($rss->channel->item)) {
 	
         //if(variable_get('AustCouncilRss_title')) 
-	$out = '<h3>Australia Council</h3>'.PHP_EOL.'<ul>'.PHP_EOL;
+//	$out = '<h3>Australia Council </h3>'.PHP_EOL.'<ul>'.PHP_EOL;
 
         //pull list & variables
         $items = $rss->channel->item;
