@@ -1,3 +1,8 @@
+/*scrub document is scrub */
+@font-face {
+    font-family:planer;
+    src:url(/sites/all/themes/DarkSynapse/fonts/planer_reg-webfont.ttf);
+}
 a {
     color:#1755A6;
     text-decoration:none;
@@ -11,29 +16,56 @@ li a.active {
    color:white;
 }
 body {
-	background-color:#022;
+	background-color:rgb(15,15,15);
+	background-image:url('../images/synapseR-bg.png');
+	background-repeat:no-repeat;
+	background-size:100% auto;
 	color:white;
 	font-weight:normal;
+	font-family:planer;
+}
+
+input {
+	font-weight:normal;
+	font-family:planer;
+
 }
 
 
 div#page {
-	background-color:rgba(0,0,0, 0.5);
+	background-color:rgba(0,0,0, 0.75);
+	padding:2em 1em;
 }
 
 h2 a, h2{
     color:white;
     text-decoration:none;
     width:100%;
-
 }
 
 h2 {
     border-bottom:1px solid #03A66A;
+    font-weight:100;
 }
 
 h2 a:hover, h2 a:focus {
 	color:#1755A6;
+}
+
+nav#main-menu a {
+background-color:transparent;
+padding:0.25em 0.5em;
+border-radius:0.25em;
+text-decoration:none;
+font-weight:700;
+transition: all 500ms ;
+color:#1755A6;
+}
+
+nav#main-menu a.active,
+nav#main-menu a:hover,nav#main-menu a:focus {
+background-color:#1755A6;
+color:white;
 }
 
 
@@ -51,8 +83,18 @@ z-index:100;
 
 .views-slideshow-controls-text-next, .views-slideshow-controls-text-previous {
 	background-color:#03A66A;
-	width:20px;
-	height:30px;
+	background-image:url(../images/left-arrow.png);
+	width:21px;
+	height:26px;
+}
+
+.views_slideshow_cycle_main.views_slideshow_main.viewsSlideshowCycle-processed div.views-field-name a {
+	color:white;
+	font-size:1.1em;
+}
+
+.views-slideshow-controls-text-next {
+	background-image:url(../images/right-arrow.png);
 }
 
 .views-slideshow-controls-text-next {
@@ -91,3 +133,128 @@ border-top:1px solid #03A66A;
 padding-top:2em;
 }
 footer div.block {float:left; width:25%; padding-right:2.5%; padding-left:2.5%;}
+
+input.form-text {
+	background-color:transparent;
+	border:1px solid #666;
+	border-radius:5px;
+	    font-family:planer;
+	padding:0.2em 0.5em;
+	color:#666;
+}
+
+input.form-text:focus {
+	color:white;
+	outline: none;
+	border:1px solid white;
+}
+
+table tbody tr {
+border-left:1px solid white;
+border-right:1px solid white;
+}
+
+table thead tr {
+border-bottom:1px solid white;
+}
+
+table thead tr th {
+padding:0.2em 0.25em;
+}
+
+table tbody tr td { min-width:10em;}
+
+table tbody tr.odd, table tbody tr.even{
+background-color:transparent;
+}
+
+table tbody tr:focus,
+table tbody tr:hover {
+background-color:white;
+}
+
+table.views-view-grid tr:nth-child(2n-1) {
+	border:none;
+	border-bottom:1px solid #8FB6D9;
+	/*background-color:#8FB6D9;*/
+}
+table.views-view-grid tr:nth-child(2n) {
+	border-bottom:1px solid #03A66A;
+	/*background-color:#03A66A;*/
+}
+
+table.views-view-grid tbody tr td {
+	padding:0.25em 0.5em;
+}
+
+table.views-view-grid tbody tr:hover {
+background:none;
+}
+
+div.region.region-header {
+width:75%;
+float:left;
+}
+
+#block-user-login {
+float:left;
+clear:right;
+}
+
+#block-user-login div div label {
+
+}
+
+form#user-login-form div div {
+float:left;
+margin:0px;padding:0px;
+}
+
+form#user-login-form div div label{
+float:left;
+}
+
+form#user-login-form .form-item, form#user-login-form ul{ margin:0px;padding:0px; padding-right:0.5em;}
+
+form#user-login-form div.item-list li.first.last,form#user-login-form .form-submit {
+color: rgb(0, 0,0);
+padding: 0.3em 0.9em;
+line-height: 1.1em;
+text-align: center;
+background-color:#03A66A;
+border:none;
+border-radius:5px;
+transition: all 500ms ;
+}
+
+form#user-login-form div.item-list li.first.last a, form#user-login-form .form-submit {
+color:black;
+text-decoration:none;
+font-weight:800;
+}
+
+form#user-login-form div.item-list li.first.last:hover,
+form#user-login-form div.item-list li.first.last:focus,
+form#user-login-form .form-submit:focus,form#user-login-form .form-submit:hover{
+background-color:#999999;
+}
+
+
+.region-header {clear:right;}
+#name-and-slogan { display:none;}
+
+div#navigation { 
+	width:600px;
+	float:left;
+	position:relative;
+	top:0;
+}
+
+
+div#block-block-4 ul{
+padding:0px;
+}
+div#block-block-4 ul li{
+list-style-type:none;
+list-style-image:none;
+}
