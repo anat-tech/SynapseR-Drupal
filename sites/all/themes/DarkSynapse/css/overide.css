@@ -177,47 +177,42 @@ input.form-text:focus {
 	border:1px solid white;
 }
 
-table tbody tr {
-border-left:1px solid white;
-border-right:1px solid white;
+table {
+border-spacing:0.25em;
+border-collapse:separate;
 }
 
-table thead tr {
-border-bottom:1px solid white;
+
+table, table tbody tr td{
+border:1px solid rgb(200,200,200);
+border-radius:0.5em 0em;
+padding:0.25em;
 }
+
+table tr.odd, table tr.even {background-color:transparent;}
+
+table tbody tr td, table tbody tr td a{
+transition: all 300ms ;
+}
+
+table tbody tr td:hover, table tbody tr td:focus{
+background-color:rgba(3,163,104, 0.3);
+}
+
+table tbody tr td:hover a, table tbody tr td:focus a, table tbody tr td a:focus, table tbody tr td a:hover{
+color:rgb(3,163,104);
+}
+
+table tbody tr:nth-child(2n) td{
+border:1px solid rgb(3,163,104);
+}
+
 
 table thead tr th {
 padding:0.2em 0.25em;
 }
 
 table tbody tr td { min-width:10em;}
-
-table tbody tr.odd, table tbody tr.even{
-background-color:transparent;
-}
-
-table tbody tr:focus,
-table tbody tr:hover {
-background-color:white;
-}
-
-table.views-view-grid tr:nth-child(2n-1) {
-	border:none;
-	border-bottom:1px solid #8FB6D9;
-	/*background-color:#8FB6D9;*/
-}
-table.views-view-grid tr:nth-child(2n) {
-	border-bottom:1px solid #03A66A;
-	/*background-color:#03A66A;*/
-}
-
-table.views-view-grid tbody tr td {
-	padding:0.25em 0.5em;
-}
-
-table.views-view-grid tbody tr:hover {
-background:none;
-}
 
 div.region.region-header {
 width:75%;
