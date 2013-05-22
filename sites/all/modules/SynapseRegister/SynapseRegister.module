@@ -8,7 +8,60 @@
  * Alters user registration form to hook into the solve360, and mailchimp databases.
  */
 
- /* variable_get('id') */
+
+//solve360 functions
+function Solve360registerUser($email) {
+	//module_load_include('php', 'SynapeRegister', 'Solve360Service');	
+	include_once(DRUPAL_ROOT.'/sites/all/modules/SynapseRegister/Solve360Service.php');
+
+	//gateway
+	$solve360 = new Solve360Service(
+		variable_get('SynapseRegister_solve360user'), 
+		variable_get('SynapseRegister_solve360key')
+	);
+
+	//check if user exists
+	if(Solve360UserExists($email,$solve360)) {
+		echo "<p>user exists in solve</p>";
+		return;
+	}
+
+	//add contact
+	$contactData = array(
+		'bussinessemail' => $email,
+		//synapse category
+	);
+
+	if($form_state['values'][field_first_name])
+		$contactData['firstname'] = $form_state['values'][field_first_name];
+	if($form_state['values'][field_last_name])
+		$contactData['firstname'] = $form_state['values'][field_last_name];
+	
+//	$contact = $solve360->addContact($contactData);
+}
+
+function Solve360UserExists($email, $solve360) {
+      $search = array(
+                'layout' => 1,
+                'searchmode' => array('Cany'),
+                'fieldlist' => 'bussinessemail',
+                'filtermode' => array('bussinessemail'),
+                'searchvalue' => $email
+                );
+       $out = $solve360->searchContacts($search);
+       if($out->count == "0") {
+			echo "<p>noe.avi</p>";
+          return false;
+		}
+       else {
+			echo "<p>hai</p>";
+          return true;
+		}
+}
+
+
+
+/* variable_get('id') */
 
 //hooks
 /**
@@ -16,6 +69,13 @@
  */
 function SynapseRegister_admin() {
     //solve360key
+	$form['SynapseRegister_solve360user'] = array (
+        '#type' => 'textfield',
+        '#title' => t('solve360 email'),
+        '#default_value' => variable_get('SynapseRegister_solve360user', ''),
+        '#description' => t("Solve360 API Username/Email"),
+        '#required' => TRUE,
+    );
     $form['SynapseRegister_solve360key'] = array (
         '#type' => 'textfield',
         '#title' => t('solve360 api key'),
@@ -23,13 +83,13 @@ function SynapseRegister_admin() {
         '#description' => t("Solve360 API key"),
         '#required' => TRUE,
     );
-    $form['SynapseRegister_mailchimpkey'] = array(
+/*    $form['SynapseRegister_mailchimpkey'] = array(
 		'#type' => 'textfield',
         '#title' => t('MailChimp api key'),
 		'#default_value' => variable_get('SynapseRegister_mailchimpkey', ''),
 		'#description' => t("MailChimp API Key"),
 		'#required' => TRUE,
-	);
+	);*/
     return system_settings_form($form);
 }
 
@@ -37,7 +97,7 @@ function SynapseRegister_admin() {
  * Implements menu().
  */
 function SynapseRegister_menu() {
-    $items['admin/config/registration'] = array(
+    $items['admin/config/registeration'] = array(
         'title' => 'Registration Form',
         'description' => 'Set options for the registration form',
         'page callback' => 'drupal_get_form',
@@ -53,7 +113,7 @@ function SynapseRegister_menu() {
 /**
  * Implements form_alter().
  */
-function SynapseRegister_form_alter(&form, &form_state, $form_id) {
+function SynapseRegister_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_register_form') {
     $form['#validate'][] = 'SynapseRegister_user_register_form_validate';
   }
@@ -61,10 +121,12 @@ function SynapseRegister_form_alter(&form, &form_state, $form_id) {
 
 /**
  * Implements form_validate
- */
+*/
 function SynapseRegister_user_register_form_validate($form, &$form_state) {
-	//$form_state['values']['pass']
-	//push to solve360 & mailchimp during validation
+//	print_r($form_state['values']);
+	//check values and then pass to function
+	//if($form_state['values']['mail'])
+		Solve360registerUser($form_state['values']['mail']);
 }
 /**/
 //end of user registration form

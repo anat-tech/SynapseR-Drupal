@@ -108,7 +108,7 @@ function rssreader_admin_validate($form, &$form_state) {
  * Implements menu().
  */
 function rssreader_menu() {
-    $items['admin/structure/rssreader'] = array(
+    $items['admin/config/synapse/rssreader'] = array(
         'title' => 'RSS Reader',
         'description' => 'Set options for the RSS Reader module.',
         'page callback' => 'drupal_get_form',

@@ -275,3 +275,23 @@
 [10-May-2013 17:17:47] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
 [10-May-2013 17:39:42] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
 [14-May-2013 14:36:30] PHP Fatal error:  Exception thrown without a stack frame in Unknown on line 0
+[22-May-2013 10:26:54] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_VARIABLE in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 63
+[22-May-2013 10:27:15] PHP Parse error:  syntax error, unexpected T_STRING, expecting T_VARIABLE in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 63
+[22-May-2013 11:13:51] PHP Parse error:  syntax error, unexpected '}' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 77
+[22-May-2013 11:14:02] PHP Parse error:  syntax error, unexpected '}' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 77
+[22-May-2013 11:39:28] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 17
+[22-May-2013 11:47:55] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 18
+[22-May-2013 11:51:51] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 18
+[22-May-2013 11:52:03] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 18
+[22-May-2013 11:52:11] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 18
+[22-May-2013 11:52:25] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 18
+[22-May-2013 11:52:34] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 18
+[22-May-2013 11:52:48] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 18
+[22-May-2013 11:55:48] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 18
+[22-May-2013 11:57:48] PHP Parse error:  syntax error, unexpected '[' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 18
+[22-May-2013 12:01:00] PHP Parse error:  syntax error, unexpected T_IF, expecting ')' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 25
+[22-May-2013 12:02:25] PHP Parse error:  syntax error, unexpected T_DOUBLE_ARROW in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 32
+[22-May-2013 12:40:46] PHP Parse error:  syntax error, unexpected ')' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 33
+[22-May-2013 12:43:42] PHP Parse error:  syntax error, unexpected ')' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 33
+[22-May-2013 13:06:23] PHP Parse error:  syntax error, unexpected T_ELSE in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 53
+[22-May-2013 13:16:07] PHP Parse error:  syntax error, unexpected T_ELSE in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 59
