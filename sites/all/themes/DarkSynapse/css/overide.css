@@ -285,3 +285,7 @@ div.profile div.field-name-field-first-name div.field-item.even {
 float: left;
 padding-right: 0.5em;
 }
+
+div.views-field-uid span , #page-title {
+text-transform: capitalize;
+}

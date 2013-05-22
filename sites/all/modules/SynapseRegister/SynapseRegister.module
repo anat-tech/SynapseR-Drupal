@@ -5,9 +5,7 @@
  */
 
 /**
- * parses a feed into a basic html list
- * @todo: prevent going over end of item array with validation.
- * dynamically generate form to add more feeds.
+ * Alters user registration form to hook into the solve360, and mailchimp databases.
  */
 
  /* variable_get('id') */
@@ -37,7 +35,7 @@ function SynapseRegister_admin() {
 
 /**
  * Implements menu().
-*/
+ */
 function SynapseRegister_menu() {
     $items['admin/config/registration'] = array(
         'title' => 'Registration Form',
@@ -51,4 +49,24 @@ function SynapseRegister_menu() {
 }
 /**/
 //end of admin
+
+/**
+ * Implements form_alter().
+ */
+function SynapseRegister_form_alter(&form, &form_state, $form_id) {
+  if ($form_id == 'user_register_form') {
+    $form['#validate'][] = 'SynapseRegister_user_register_form_validate';
+  }
+}
+
+/**
+ * Implements form_validate
+ */
+function SynapseRegister_user_register_form_validate($form, &$form_state) {
+	//$form_state['values']['pass']
+	//push to solve360 & mailchimp during validation
+}
+/**/
+//end of user registration form
+
 ?>

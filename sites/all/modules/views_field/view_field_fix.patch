@@ -1,0 +1,11 @@
+--- views_field.module	2012-10-09 13:53:11.000000000 +1030
++++ views_field.patch	2012-10-09 13:52:46.000000000 +1030
+@@ -60,7 +60,7 @@
+  * Implements hook_field_views_data_alter().
+  */
+ function views_field_field_views_data_alter(&$data, $field, $module) {
+-  if (!$field['settings']['views_base_table']) {
++  if (empty($field['settings']['views_base_table'])) {
+     return;
+   }
+ 
