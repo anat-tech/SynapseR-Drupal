@@ -11,6 +11,9 @@
 
 //solve360 functions
 function Solve360registerUser($email) {
+	//poor check to make sure the form will pass.
+	if((!isset($form_state['values']['pass'])) || (!isset($form_state['values']['name']))) return;
+
 	//module_load_include('php', 'SynapeRegister', 'Solve360Service');	
 	include_once(DRUPAL_ROOT.'/sites/all/modules/SynapseRegister/Solve360Service.php');
 
@@ -20,9 +23,13 @@ function Solve360registerUser($email) {
 		variable_get('SynapseRegister_solve360key')
 	);
 
-	//check if user exists
-	if(Solve360UserExists($email,$solve360)) {
-		echo "<p>user exists in solve</p>";
+	//if user exists
+	$id=Solve360UserExists($email,$solve360);
+	if((bool)$id !== false) {
+		//add to synapse
+		$categoryID='16652194';
+		$solve360->editContact($id,array("categories" => array("add" => array("category" =>array($categoryID)))));
+			drupal_set_message(t('Solve360: Added synapse category to '.$email), 'status');
 		return;
 	}
 
@@ -32,12 +39,18 @@ function Solve360registerUser($email) {
 		//synapse category
 	);
 
-	if($form_state['values'][field_first_name])
-		$contactData['firstname'] = $form_state['values'][field_first_name];
-	if($form_state['values'][field_last_name])
-		$contactData['firstname'] = $form_state['values'][field_last_name];
+	if(isset($form_state['values']['field_first_name']))
+		$contactData['firstname'] = $form_state['values']['field_first_name'];
+	if(isset($form_state['values']['field_last_name']))
+		$contactData['firstname'] = $form_state['values']['field_last_name'];
 	
-//	$contact = $solve360->addContact($contactData);
+	$contact = $solve360->addContact($contactData);
+	if(isset($contact->errors)) {
+		drupal_set_message(t('Error: was unable to add contact to Solve360'), 'error');
+	} else {
+		drupal_set_message(t("&lt;".$email."&gt; added to solve360."), 'status');
+	}
+
 }
 
 function Solve360UserExists($email, $solve360) {
@@ -50,16 +63,15 @@ function Solve360UserExists($email, $solve360) {
                 );
        $out = $solve360->searchContacts($search);
        if($out->count == "0") {
-			echo "<p>noe.avi</p>";
           return false;
 		}
        else {
-			echo "<p>hai</p>";
-          return true;
-		}
+		  drupal_set_message("Solve360: User/Email &lt;".$email."&gt; already exists in.");
+		  foreach($out->children() as $contact) {
+        	    return $contact->id->__toString();
+       	  }
+	   }
 }
-
-
 
 /* variable_get('id') */
 
@@ -111,7 +123,7 @@ function SynapseRegister_menu() {
 //end of admin
 
 /**
- * Implements form_alter().
+ * Implements form_alter.
  */
 function SynapseRegister_form_alter(&$form, &$form_state, $form_id) {
   if ($form_id == 'user_register_form') {
@@ -125,7 +137,7 @@ function SynapseRegister_form_alter(&$form, &$form_state, $form_id) {
 function SynapseRegister_user_register_form_validate($form, &$form_state) {
 //	print_r($form_state['values']);
 	//check values and then pass to function
-	//if($form_state['values']['mail'])
+	if(isset($form_state['values']['mail']))
 		Solve360registerUser($form_state['values']['mail']);
 }
 /**/
