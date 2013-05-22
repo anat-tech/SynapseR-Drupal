@@ -2,17 +2,39 @@
 /*
  * Synapse Registration form
  * @author Cameron Milton <cameron@anat.org.au>
+ * @todo: mailchimp check before subscribing
+ * @todo: check email doesn't already exist
  */
 
 /**
  * Alters user registration form to hook into the solve360, and mailchimp databases.
  */
 
+//MailChimp functions
+function MailChimpSubscribe($email) {
+	//module_load_include('php', 'SynapeRegister', 'Solve360Service');	
+	include_once(DRUPAL_ROOT.'/sites/all/modules/SynapseRegister/MCAPI.class.php'); //API 1.3
+
+	//gateway
+	$api = new MCAPI(variable_get('SynapseRegister_mailchimpkey'));
+	if(isset($form_state['values']['field_first_name']) && isset($form_state['values']['field_last_name']))
+
+	$retval = $api->listSubscribe( variable_get('SynapseRegister_mailchimplistid'), $email,  array(
+		'FNAME' => $form_state['values']['field_first_name'], 
+		'LNAME' => $form_state['values']['field_last_name']
+	));
+
+	if ($api->errorCode){
+        drupal_set_message(t("MailChimp Error: Unable to subscribe.\n\tCode=".$api->errorCode."\n\tMsg=".$api->errorMessage), 'error');
+	} else {
+    	drupal_set_message(t("MailChimp:ANAT mail list subscription request has been sent."),'status');
+	}
+
+}
 
 //solve360 functions
 function Solve360registerUser($email) {
 	//poor check to make sure the form will pass.
-	if((!isset($form_state['values']['pass'])) || (!isset($form_state['values']['name']))) return;
 
 	//module_load_include('php', 'SynapeRegister', 'Solve360Service');	
 	include_once(DRUPAL_ROOT.'/sites/all/modules/SynapseRegister/Solve360Service.php');
@@ -81,27 +103,36 @@ function Solve360UserExists($email, $solve360) {
  */
 function SynapseRegister_admin() {
     //solve360key
-	$form['SynapseRegister_solve360user'] = array (
-        '#type' => 'textfield',
-        '#title' => t('solve360 email'),
-        '#default_value' => variable_get('SynapseRegister_solve360user', ''),
-        '#description' => t("Solve360 API Username/Email"),
-        '#required' => TRUE,
-    );
     $form['SynapseRegister_solve360key'] = array (
         '#type' => 'textfield',
-        '#title' => t('solve360 api key'),
+        '#title' => t('Solve360 api key'),
         '#default_value' => variable_get('SynapseRegister_solve360key', ''),
         '#description' => t("Solve360 API key"),
-        '#required' => TRUE,
+        '#required' => FALSE,
     );
-/*    $form['SynapseRegister_mailchimpkey'] = array(
+	$form['SynapseRegister_solve360user'] = array (
+        '#type' => 'textfield',
+        '#title' => t('Solve360 email'),
+        '#default_value' => variable_get('SynapseRegister_solve360user', ''),
+        '#description' => t("Solve360 API Username/Email"),
+        '#required' => FALSE,
+    );
+
+    $form['SynapseRegister_mailchimpkey'] = array(
 		'#type' => 'textfield',
         '#title' => t('MailChimp api key'),
 		'#default_value' => variable_get('SynapseRegister_mailchimpkey', ''),
 		'#description' => t("MailChimp API Key"),
-		'#required' => TRUE,
-	);*/
+		'#required' => FALSE,
+	);
+    $form['SynapseRegister_mailchimplistid'] = array(
+		'#type' => 'textfield',
+        '#title' => t('MailChimp list id'),
+		'#default_value' => variable_get('SynapseRegister_mailchimplistid', ''),
+		'#description' => t("MailChimp List ID"),
+		'#required' => FALSE,
+	);
+
     return system_settings_form($form);
 }
 
@@ -109,8 +140,8 @@ function SynapseRegister_admin() {
  * Implements menu().
  */
 function SynapseRegister_menu() {
-    $items['admin/config/registeration'] = array(
-        'title' => 'Registration Form',
+    $items['admin/config/apikeys'] = array(
+        'title' => 'API Keys',
         'description' => 'Set options for the registration form',
         'page callback' => 'drupal_get_form',
         'page arguments' => array('SynapseRegister_admin'),
@@ -137,8 +168,10 @@ function SynapseRegister_form_alter(&$form, &$form_state, $form_id) {
 function SynapseRegister_user_register_form_validate($form, &$form_state) {
 //	print_r($form_state['values']);
 	//check values and then pass to function
-	if(isset($form_state['values']['mail']))
+	if( (!empty($form_state['values']['mail'])) && (!empty($form_state['values']['pass'])) && (!empty($form_state['values']['pass']))&&(!empty($form_state['values']['name']))) {
 		Solve360registerUser($form_state['values']['mail']);
+		MailChimpSubscribe($form_state['values']['mail']);
+	}
 }
 /**/
 //end of user registration form

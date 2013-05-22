@@ -327,3 +327,12 @@
 [22-May-2013 15:05:03] PHP Fatal error:  Call to undefined function form_set_message() in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 30
 [22-May-2013 15:05:30] PHP Fatal error:  Call to undefined function form_set_message() in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 30
 [22-May-2013 15:22:48] PHP Parse error:  syntax error, unexpected T_STRING in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 33
+[22-May-2013 16:05:20] PHP Parse error:  syntax error, unexpected T_IF in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 152
+[22-May-2013 16:09:16] PHP Fatal error:  Class 'Solve360Service' not found in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 27
+[22-May-2013 16:30:06] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 19
+[22-May-2013 16:30:26] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 19
+[22-May-2013 16:31:14] PHP Fatal error:  Call to undefined function get_variable() in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 18
+[22-May-2013 16:32:35] PHP Parse error:  syntax error, unexpected '[', expecting ')' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 19
+[22-May-2013 16:51:52] PHP Parse error:  syntax error, unexpected '*' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 29
+[22-May-2013 16:56:02] PHP Parse error:  syntax error, unexpected ';' in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 24
+[22-May-2013 16:58:40] PHP Fatal error:  Call to undefined function isnull() in /var/www/synapse/synapseR/sites/all/modules/SynapseRegister/SynapseRegister.module on line 171
